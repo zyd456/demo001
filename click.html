@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <style>
+        button{
+            width: 50px;
+            height: 50px;
+            border: 1px solid red;
+        }
+    .sum{
+        width: 100px;
+        height: 50px;
+        border: 1px solid black;
+    }
+    </style>
+</head>
+<body>
+    <!-- <div>点击</div> -->
+    <button>点击</button>
+    <div class="sum">数量
+        <span>0</span>
+    </div>
+    <script>
+    $(function(){
+        $("button").click(function(){
+            $sum = parseInt($(".sum span").html())+1;
+            $("span").html($sum);
+            // console.log($(".sum").offset().top);
+            console.log($(".sum").width());
+            console.log(document.documentElement.clientHeight);
+            console.log(document.documentElement.clientWidth);
+        })
+        console.log(document.documentElement.scrollTop);
+    })
+    </script>
+</body>
+</html>
